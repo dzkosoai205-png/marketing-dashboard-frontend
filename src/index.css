@@ -1,3 +1,53 @@
+/* src/index.css */
+
+/* === CÁC CHỈ THỊ TAILWIND QUAN TRỌNG NHẤT (GIỮ NGUYÊN) === */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* === CÁC CSS GLOBAL BỔ SUNG CỦA BẠN === */
+/* Đây là nơi bạn đặt các style toàn cục cho <body>, font chữ, v.v. */
+html, body, #root {
+  height: 100%; /* Đảm bảo HTML, body, và root div chiếm toàn bộ chiều cao */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* CÁC STYLE NỀN VÀ CHỮ MÀ BẠN CÓ TRONG COMPONENT CỦA MÌNH */
+  /* Đây là lý do chính hiển thị xấu: thiếu màu nền và chữ toàn cục */
+  background-color: #1a202c; /* gray-900 */
+  color: #e2e8f0; /* gray-200 */
+}
+
+/* Các style cho code (nếu có) */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Thêm các style cho scrollbar để nó đẹp hơn nếu cần */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #374151; /* gray-700 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280; /* gray-500 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* gray-400 */
+}
